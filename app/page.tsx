@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 import { Search, ChevronDown, Star, Shield, Zap, Award, Phone, Mail, MapPin, ArrowRight, Check, Fuel, Settings, Users, Activity } from 'lucide-react';
@@ -111,7 +111,7 @@ const featuredCars = [
   {
     id: "f5",
     make: "Lamborghini",
-    model: "Huracán EVO",
+    model: "Hurac\u00e1n EVO",
     year: 2022,
     price: 248000,
     mileage: 3800,
@@ -182,12 +182,12 @@ const localStats = [
 ];
 
 const bodyTypes = [
-  { label: "Sedan", icon: "🚗", count: 284 },
-  { label: "SUV", icon: "🚙", count: 412 },
-  { label: "Coupe", icon: "🏎️", count: 156 },
-  { label: "Convertible", icon: "🚘", count: 89 },
-  { label: "Truck", icon: "🛻", count: 203 },
-  { label: "Electric", icon: "⚡", count: 178 },
+  { label: "Sedan", icon: "\uD83D\uDE97", count: 284 },
+  { label: "SUV", icon: "\uD83D\uDE99", count: 412 },
+  { label: "Coupe", icon: "\uD83C\uDFCE\uFE0F", count: 156 },
+  { label: "Convertible", icon: "\uD83D\uDE98", count: 89 },
+  { label: "Truck", icon: "\uD83D\uDEFB", count: 203 },
+  { label: "Electric", icon: "\u26A1", count: 178 },
 ];
 
 const badgeColors: Record<string, string> = {
@@ -825,7 +825,7 @@ export default function HomePage() {
               >
                 <StarRating rating={t.rating} />
                 <p className="text-white/70 text-sm leading-relaxed mt-4 mb-6 text-pretty">
-                  "{t.text}"
+                  &ldquo;{t.text}&rdquo;
                 </p>
                 <div className="flex items-center gap-3 pt-4 border-t border-white/8">
                   <div className="w-10 h-10 rounded-full bg-[#e63946]/20 border border-[#e63946]/30 flex items-center justify-center text-[#e63946] font-bold text-sm shrink-0">
@@ -900,7 +900,7 @@ export default function HomePage() {
                 variants={fadeInUp}
                 className="text-white/60 leading-relaxed mb-10 text-pretty"
               >
-                Whether you're buying, selling, or just exploring, our team is
+                Whether you&apos;re buying, selling, or just exploring, our team is
                 here to help. Reach out and a dedicated advisor will respond
                 within one business hour.
               </motion.p>
@@ -987,7 +987,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <label className="text-white/50 text-xs font-medium mb-1.5 block">
-                    I'm interested in
+                    I&apos;m interested in
                   </label>
                   <select
                     name="interest"
